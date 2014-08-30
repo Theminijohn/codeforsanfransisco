@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="codesf_footer">
+    <ul class="footer_links pull-right">
+      <li><%= link_to 'Projects', '#' %></li>
+      <li><%= link_to 'Faq', '#' %></li>
+      <li><%= link_to 'Contact', '#' %></li>
+    </ul>
+
+    <%= link_to root_path do %>
+      <span class="code_sf_icon" title="Code for San Francisco">
+        <i class="fa fa-code"></i>
+      </span>
+    <% end %>
+
+    <ul class="footer_links">
+      <li>© <%= Time.now.year %> CodeSF</li>
+      <li><%= link_to 'About us', '#' %></li>
+      <li><%= link_to 'Blog', articles_path %></li>
+      <li><%= link_to 'Community', '#' %></li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<nav class="navbar navbar-default navbar-fixed-top codesf-nav" role="navigation">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to root_path, class: 'navbar-brand' do %>
+        <i class="fa fa-code"></i> Code for San Francisco
+      <% end %>
+    </div>
+
+
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <i class="fa fa-on-off"></i> Log out
+            <% end %>
+          </li>
+        <% end%>
+        <li>
+          <%= link_to '#', class: "csf_nav_button" do %>
+            Check in to Hack Night
+          <% end %>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
