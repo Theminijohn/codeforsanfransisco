@@ -14,7 +14,9 @@
 
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to "New Article", new_article_path %></li>
+        <% end %>
       </ul>
     </div>
   </div>

@@ -15,14 +15,18 @@
 
 
     <div class="collapse navbar-collapse navbar-ex1-collapse">
+      
+      <ul class="nav navbar-nav left_nav">
+        <li><%= link_to 'About us', '#' %></li>
+        <li><%= link_to 'Blog', articles_path %></li>
+        <li><%= link_to 'Community', '#' %></li>
+        
+        <li><%= link_to 'Projects', '#' %></li>
+        <li><%= link_to 'FAQ', '#' %></li>
+        <li><%= link_to 'Contact', '#' %></li>
+      </ul>
+
       <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-          <li>
-            <%= link_to destroy_user_session_path, method: :delete do %>
-              <i class="fa fa-on-off"></i> Log out
-            <% end %>
-          </li>
-        <% end%>
         <li>
           <%= link_to '#', class: "csf_nav_button" do %>
             Check in to Hack Night

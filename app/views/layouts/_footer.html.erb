@@ -4,6 +4,22 @@
       <li><%= link_to 'Projects', '#' %></li>
       <li><%= link_to 'Faq', '#' %></li>
       <li><%= link_to 'Contact', '#' %></li>
+      <li>
+
+        <% if user_signed_in? %>
+
+          <%= link_to destroy_user_session_path, method: :delete, data: {confirm: "Are you sure you want to log out?"} do %>
+            <i class="fa fa-toggle-off"></i>
+          <% end %>
+
+
+        <% else %>
+          <%= link_to new_user_session_path do %>
+            <i class="fa fa-toggle-on"></i>
+          <% end %>
+        <% end %>
+
+      </li>
     </ul>
 
     <%= link_to root_path do %>
