@@ -10,9 +10,20 @@
 <body>
 
 <!-- Le Header -->
-<%= render 'layouts/header' %>
+<%= render 'layouts/container_header' %>
+
+<div class="container">
+<!-- Flash Message -->
+
+	<% flash.each do |name, msg| %>
+	  <%= content_tag(:div, class: "alert alert-info") do%>
+	    <%=msg%>
+	    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	  <%end%>
+	<% end %>
 
 <%= yield %>
+</div>
 
 <!-- le Footer -->
 <%= render 'layouts/footer' %>

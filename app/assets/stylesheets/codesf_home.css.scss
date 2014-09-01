@@ -1,0 +1,74 @@
+@import 'colors';
+
+.main_codesf {
+  overflow: hidden;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	background-image: url("http://i.imgur.com/CIVgSlg.jpg");
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+	background-position: center 16%;
+	height: 580px;
+	position: relative;
+	padding-top: 150px;
+	border-bottom: 1px solid rgba(49,78,95,0.12);
+}
+
+// Update bar
+aside.codesf_update {
+	background: #fff;
+	border-bottom: 1px solid rgba(49,78,95,0.12);
+	display: block;
+	p {
+		color: #6f7c82;
+		display: block;
+		margin: 10px 0;
+		text-align: center;
+		font-size: 1.1em;
+		padding: 0;
+		i {
+			color: #008cdd;
+		}
+	}
+}
+
+// 4 Columns beneath Jumbo
+.main_columns {
+	padding-top: 25px;
+	.main_section {
+		border: 1px dashed rgba(158,158,166,.3);
+		border-radius: 4px;
+		padding: 20px 15px;
+		margin-bottom: 20px;
+		-webkit-font-smoothing: antialiased;
+		a {
+			text-decoration: none;
+			h2 {
+				color: #4d565b;
+				font-weight: 700;
+				font-size: 1.1em;
+			}
+			p {
+				color: #6f7c82;
+				&.section_icon {
+					color: #6f7c82;
+				}
+			}
+			.section_icon i {
+				font-size: 3.2em;
+			}
+		}
+		-webkit-transition: background 200ms ease;
+		-moz-transition: background 200ms ease;
+		-o-transition: background 200ms ease;
+		-ms-transition: background 200ms ease;
+		transition: background 200ms ease;
+		&:hover {
+			background-color: rgba(14,60,86,0.04);
+		}
+	}
+}
+
+

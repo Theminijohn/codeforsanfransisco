@@ -1,0 +1,52 @@
+<div class="row">
+	
+	<!-- Blog Articles -->
+	<div class="col-md-9">
+		<div class="article_index">
+
+			<!-- Individual Article -->
+			<% @articles.each do |article| %>
+			<div class="article">
+
+				<div class="date_wrapper">
+					<div class="date">
+						<span class="day"><%= article.created_at.strftime('%d') %></span>
+						<span class="month"><%= article.created_at.strftime('%b') %></span>
+					</div>
+				</div><!-- /.date_wrapper -->
+
+				<!-- Content -->
+				<div class="article_content">
+					<h2 class="article_title">
+						<%= link_to article.title, article %>
+					</h2>
+
+					<ul class="meta">
+						<li class="categories"><a href="#">Identity</a>, <a href="#">Graphic Design</a></li>
+						<li class="comments"><a href="#">24</a></li>
+						<li class="likes"><a href="#">73</a></li>
+					</ul>
+
+					<p class="preview">
+						Magnis modipsae que lib voloratati andigen daepeditem quiate ut repore autem labor. Laceaque quiae sitiorem rest non restibusaes es tumquam core posae volor remped modis volor. Doloreiur qui commolu oreprerum.
+					</p>
+
+					<div class="pull-left read_more">
+						<%= link_to "Read more", article, class: "btn btn-primary btn-lg" %>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+
+			</div> <!-- /.article -->
+			<% end %>
+
+
+
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+	<div class="col-md-3">
+	</div>
+
+</div>

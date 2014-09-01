@@ -1,0 +1,52 @@
+@import 'colors';
+
+// Main Navbar
+.codesf-nav {
+	margin-top: 10px;
+	border: none;
+	background-color: transparent;
+  background: transparent;
+  a.navbar-brand {
+    margin-top: 5px;
+    font-size: 20px;
+  	color: rgba(255,255,255,.8);
+  	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    transition: color 0.25s ease, border 0.25s ease;
+  	&:hover {
+  		color: rgba(255,255,255,.9);
+  	}
+  }
+  a {
+  	text-shadow: 0 1px 2px rgba(8,43,56,0.5);
+  }
+  ul.left_nav {
+    margin-top: 8px; 
+    li {
+      a {
+        color: rgba(255,255,255,.8);
+        &:hover {
+          color: rgba(255,255,255,.9);
+        }
+      }
+    }
+  } 
+  ul.navbar-right {
+  	li {
+  		a {
+  			color: rgba(255,255,255,.8);
+  		}
+  		a.csf_nav_button {
+		  	margin-top: 10px;
+		  	border: 1px solid rgba(255,255,255,.4);
+        transition: color 0.25s ease, border 0.25s ease;
+		  	border-radius: 3px;
+		  	padding: 7px 15px;
+		  	&:hover {
+		  		color: rgba(255,255,255,.9);
+		  		border: 1px solid rgba(255,255,255,.6);
+		  		background-color: rgba(255,255,255,.1);
+		  	}
+		  }
+  	}
+  }
+}

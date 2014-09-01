@@ -16,15 +16,19 @@ Bundler.require(*Rails.groups)
 module Codesf
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
 
-    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
-    # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    # If you push your application to heroku, it will precompile your assets automatically. 
+    # It might fail if your assets contain references to environment variables such as 
+    # hostname of database. To fix this we deactivate it:
+    config.assets.initialize_on_precompile = false
 
-    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    # We are telling devise not to use the default layout 'application'.
+    config.to_prepare do
+	    Devise::SessionsController.layout "blog"
+	    Devise::RegistrationsController.layout "blog"
+	    Devise::ConfirmationsController.layout "blog"
+	    Devise::UnlocksController.layout "blog"
+	    Devise::PasswordsController.layout "blog"
+		end
   end
 end

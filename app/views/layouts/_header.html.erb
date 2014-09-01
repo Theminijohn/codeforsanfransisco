@@ -1,0 +1,40 @@
+<nav class="navbar navbar-default navbar-fixed-top codesf-nav" role="navigation">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to root_path, class: 'navbar-brand' do %>
+        <i class="fa fa-code"></i> Code for San Francisco
+      <% end %>
+    </div>
+
+
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      
+      <ul class="nav navbar-nav left_nav">
+        <li><%= link_to 'About us', '#' %></li>
+        <li><%= link_to 'Blog', articles_path %></li>
+        <li><%= link_to 'Community', '#' %></li>
+        
+        <li><%= link_to 'Projects', '#' %></li>
+        <li><%= link_to 'FAQ', '#' %></li>
+        <li><%= link_to 'Contact', '#' %></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= link_to '#', class: "csf_nav_button" do %>
+            Check in to Hack Night
+          <% end %>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
